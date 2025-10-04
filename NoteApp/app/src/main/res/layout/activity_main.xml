@@ -5,22 +5,22 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5F5F5"
     tools:context=".MainActivity">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <!-- Thanh tìm kiếm -->
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
-            android:text="Search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+                android:elevation="4dp"
             android:queryHint="Tìm ghi chú..."
-            android:iconifiedByDefault="false"
-            android:layout_margin="8dp" />
+            android:iconifiedByDefault="false" />
 
         <!-- Danh sách ghi chú -->
         <androidx.recyclerview.widget.RecyclerView
@@ -28,7 +28,8 @@
             android:layout_below="@id/searchView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="8dp" />
+            android:padding="8dp"
+            android:clipToPadding="false" />
 
         <!-- Nút thêm ghi chú -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -37,9 +38,14 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:layout_margin="16dp"
+            android:layout_margin="24dp"
             app:srcCompat="@android:drawable/ic_input_add"
             app:tint="@android:color/white"
+            app:backgroundTint="#2196F3"
+            app:elevation="8dp"
+            app:pressedTranslationZ="16dp"
+            app:rippleColor="#80FFFFFF"
+            app:borderWidth="0dp"
             android:contentDescription="Thêm ghi chú" />
 
     </RelativeLayout>
